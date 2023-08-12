@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { db } from './firebase'
-import { addDoc, collection, getDoc, query, getDocs, updateDoc, doc, deleteDoc } from 'firebase/firestore'
+import { addDoc, collection, query, getDocs, updateDoc, doc, deleteDoc } from 'firebase/firestore'
 
 const App = () => {
   const [name, setName] = useState('')
@@ -16,6 +16,7 @@ const App = () => {
     getStudent()
   }
 
+  
   // TO ADD STUDENT
   const getStudent = async () => {
     const q = query(collection(db, "students"))
